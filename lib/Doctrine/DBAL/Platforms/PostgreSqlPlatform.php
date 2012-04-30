@@ -620,6 +620,17 @@ class PostgreSqlPlatform extends AbstractPlatform
     }
 
     /**
+     * Decleration for a UUID field in PostgreSQL
+     *
+     * @param array $field
+     * @return string
+     */
+    public function getGuidTypeDeclartionSQL(array $field)
+    {
+        return 'UUID';
+    }
+    
+    /**
      * @override
      */
     public function getDateTimeTypeDeclarationSQL(array $fieldDeclaration)
@@ -768,6 +779,8 @@ class PostgreSqlPlatform extends AbstractPlatform
             'money'         => 'decimal',
             'numeric'       => 'decimal',
             'year'          => 'date',
+            'uuid'          => 'guid',
+            'oid'           => 'integer',
             'bytea'         => 'blob',
         );
     }
