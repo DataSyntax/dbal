@@ -629,7 +629,7 @@ class PostgreSqlPlatform extends AbstractPlatform
     {
         return 'UUID';
     }
-
+    
     /**
      * @override
      */
@@ -780,6 +780,7 @@ class PostgreSqlPlatform extends AbstractPlatform
             'numeric'       => 'decimal',
             'year'          => 'date',
             'uuid'          => 'guid',
+            'oid'           => 'integer',
             'bytea'         => 'blob',
         );
     }
